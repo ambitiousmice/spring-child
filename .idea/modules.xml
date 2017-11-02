@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-child.iml" filepath="$PROJECT_DIR$/spring-child.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-child-domain/spring-child-domain.iml" filepath="$PROJECT_DIR$/spring-child-domain/spring-child-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-child-persistence/spring-child-persistence.iml" filepath="$PROJECT_DIR$/spring-child-persistence/spring-child-persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-child-service/spring-child-service.iml" filepath="$PROJECT_DIR$/spring-child-service/spring-child-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-child-web/spring-child-web.iml" filepath="$PROJECT_DIR$/spring-child-web/spring-child-web.iml" />
+    </modules>
+  </component>
+</project>
