@@ -13,4 +13,8 @@ public interface UserService {
 
     UserBean getByUserName(String userName);
 
+    Boolean add(String userName,String password);
+
+
+
 }

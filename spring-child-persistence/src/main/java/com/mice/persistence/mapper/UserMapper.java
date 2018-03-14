@@ -1,10 +1,7 @@
 package com.mice.persistence.mapper;
 
 import com.mice.domain.UserBean;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -16,8 +13,8 @@ public interface UserMapper {
     @Select("select * from user where user_name = #{userName}")
     public UserBean getByUserName(String userName);
 
-    @Insert("insert into user(user_name,password) values{#{userName},#{password}")
-    public Boolean add(String userName,String password);
+    @Insert("insert into user(user_name,password) values(#{userName},#{password})")
+    public Boolean add(@Param("userName") String userName, @Param("password") String password);
 
 
     @Delete("delete from user where id = #{id}")

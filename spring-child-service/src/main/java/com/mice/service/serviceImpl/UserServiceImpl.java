@@ -5,6 +5,8 @@ import com.mice.persistence.mapper.RoleMenuMapper;
 import com.mice.persistence.mapper.UserMapper;
 import com.mice.persistence.mapper.UserRoleMapper;
 import com.mice.service.service.UserService;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -31,9 +33,21 @@ public class UserServiceImpl implements UserService {
         return roleMenuMapper.getPermsByRoleIds(roles);
     }
 
+    @Cacheable("users")
     public UserBean getByUserName(String userName) {
-
-
         return userMapper.getByUserName(userName);
     }
+
+    @Cacheable(value = { "users"})
+    public Boolean add(String userName, String password) {
+        return userMapper.add(userName,password);
+    }
+
+    @CacheEvict(value = { "users"}, allEntries = true)
+    public void delete(String userName, String password) {
+
+    }
+
+
+
 }

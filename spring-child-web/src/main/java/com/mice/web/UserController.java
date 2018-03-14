@@ -9,14 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by AmbitiousMice on 2018/1/9.
  */
-@Controller("/user")
+@RequestMapping("/user")
+@Controller
 public class UserController {
     @Autowired
     private UserService userService;

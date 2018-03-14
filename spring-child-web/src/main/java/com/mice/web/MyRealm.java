@@ -55,8 +55,8 @@ public class MyRealm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
             String userName = (String)authenticationToken.getPrincipal();
-            String password = (String)authenticationToken.getCredentials();
-            UserBean userBean  = userService.getByUserName(userName);
+            String password =  new String((char[]) authenticationToken.getCredentials());
+        UserBean userBean  = userService.getByUserName(userName);
             if(userBean==null){
                 throw new UnknownAccountException("账号或密码不存在");
             }

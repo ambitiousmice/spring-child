@@ -1,9 +1,12 @@
 package com.mice.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by AmbitiousMice on 2018/1/9.
  */
-public class UserBean {
+public class UserBean implements Serializable{
+    private static final long serialVersionUID = -1780498159996307574L;
     private Long id;
     private String userName;
     private String password;
