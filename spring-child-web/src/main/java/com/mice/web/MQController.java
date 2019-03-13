@@ -79,6 +79,7 @@ public class MQController {
             MBeanServerConnection connection = connector.getMBeanServerConnection();
   
                 
+                
             return "manager";
         }
 }
