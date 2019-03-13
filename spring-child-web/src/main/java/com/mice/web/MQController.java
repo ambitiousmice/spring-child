@@ -77,7 +77,8 @@ public class MQController {
             JMXConnector connector = JMXConnectorFactory.connect(url);
             connector.connect();
             MBeanServerConnection connection = connector.getMBeanServerConnection();
-
+  
+                
             return "manager";
         }
 }
